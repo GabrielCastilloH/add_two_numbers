@@ -12,11 +12,14 @@ public class Main {
 
         System.out.println("Enter a binary number: ");
         Scanner secNumInput = new Scanner(System.in);
-        secondNum = Integer.parseInt(numberInput.nextLine());
-
-        int finalNum = firstNum + secondNum;
+        secondNum = Integer.parseInt(secNumInput.nextLine());
 
         System.out.println("Numbers you entered: " + firstNum + ", " + secondNum);
-        System.out.println("Sum: " + finalNum);
+
+        firstNum = Integer.parseInt(Integer.toString(firstNum), 2);
+        secondNum = Integer.parseInt(Integer.toString(secondNum), 2);
+        int finalNum = firstNum + secondNum;
+
+        System.out.println("Sum of Binary Numbers: " + Integer.toBinaryString(finalNum));
     }
 }
